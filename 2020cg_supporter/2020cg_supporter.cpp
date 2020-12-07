@@ -5,6 +5,14 @@
 
 #include <iostream>
 
+void renderFunc()
+{
+	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+
+	glutSwapBuffers();
+}
+
 int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
@@ -22,4 +30,19 @@ int main(int argc, char** argv)
 	{
 		std::cout << "GLEW 3.0 not supported\n ";
 	}
+
+	glutDisplayFunc(renderFunc);
+	//glutIdleFunc(Idle);
+	//
+	//glutKeyboardFunc(KeyInput);
+	//glutKeyboardUpFunc(KeyUpInput);
+	//glutSpecialFunc(SpecialKeyInput);
+	//glutSpecialUpFunc(SpecialKeyUpInput);
+	//glutKeyboardUpFunc(KeyUpInput);
+	//
+	//glutMouseFunc(MouseInput);
+
+	glutMainLoop();
+
+	return 0;
 }
