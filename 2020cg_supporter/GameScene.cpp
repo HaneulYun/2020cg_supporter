@@ -3,7 +3,11 @@
 
 void GameScene::BuildObject()
 {
-	Shader* shader = nullptr;// new Shader();
+	Shader* shader = new Shader();
+	{
+		shader->LoadShaders("Shaders/vs.vs", "Shaders/fs.fs");
+	}
+
 	Mesh* mesh0 = new Mesh();
 	Mesh* mesh1 = new Mesh();
 
