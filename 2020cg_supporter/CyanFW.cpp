@@ -6,22 +6,13 @@
 Scene* CyanFW::scene = nullptr;
 Graphics* CyanFW::graphics = nullptr;
 
-vector<float> vertecies;
-vector<float> uvs;
-vector<float> textures;
-vector<float> verteciesIndex;
-vector<float> uvsIndex;
-vector<float> texturesIndex;
-
-GLuint vao, vbo[3], ebo[3];
-
 int CyanFW::Run(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(0, 0);
 	glutInitWindowSize(500, 500);
-	glutCreateWindow("�����̸� �����ұ�");
+	glutCreateWindow("BootCamp");
 
 	if (glewInit() != GLEW_OK) {
 		std::cerr << "Unable to initialize GLEW" << std::endl;
@@ -41,6 +32,9 @@ int CyanFW::Run(int argc, char** argv)
 	glutSpecialFunc(SpecialKeyInput);
 	glutSpecialUpFunc(SpecialKeyUpInput);
 
+	glEnable(GL_DEPTH_TEST);
+	//glDepthFunc(GL_LESS);
+
 	glutMainLoop();
 
 	return 0;
@@ -49,7 +43,7 @@ int CyanFW::Run(int argc, char** argv)
 void CyanFW::Update()
 {
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	Time::Instance()->Update();
 

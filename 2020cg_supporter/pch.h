@@ -31,6 +31,7 @@ using namespace std;
 #include "MeshFilter.h"
 
 #include "Shader.h"
+#include "Material.h"
 #include "Renderer.h"
 
 #include "GameObject.h"

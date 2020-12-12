@@ -58,6 +58,9 @@
     <Filter Include="0_00_CyanFW\90_ETC">
       <UniqueIdentifier>{cb1f750d-4957-4172-82c6-b3b71de82a00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0_00_CyanFW\04_Material">
+      <UniqueIdentifier>{27a1c5ac-6fbf-44f9-b64e-ec4559732e28}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -110,6 +113,9 @@
     </ClCompile>
     <ClCompile Include="Time.cpp">
       <Filter>0_00_CyanFW\40_Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>0_00_CyanFW\04_Material</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="Time.h">
       <Filter>0_00_CyanFW\40_Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>0_00_CyanFW\04_Material</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
