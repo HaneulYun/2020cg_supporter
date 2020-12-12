@@ -9,6 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include <deque>
 #include <map>
 using namespace std;
