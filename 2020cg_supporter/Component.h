@@ -3,5 +3,9 @@
 class Component
 {
 public:
-	void update();
+	class GameObject* gameObject;
+
+public:
+	virtual void Start() {};
+	virtual void Update() {};
 };

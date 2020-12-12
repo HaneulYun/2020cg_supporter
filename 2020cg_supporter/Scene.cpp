@@ -1,13 +1,21 @@
 #include "pch.h"
 #include "Scene.h"
 
-void Scene::update()
+void Scene::Update()
 {
 	for (auto gameObject : gameObjects)
-		gameObject->update();
+		gameObject->Update();
 }
 
-void Scene::render()
+GameObject* Scene::CreateEmpty()
 {
-	// °í¹ÎÁß
+	return AddGameObject(new GameObject());
+}
+
+GameObject* Scene::AddGameObject(GameObject* gameObject)
+{
+	//gameObject->SetScene(this);
+	gameObjects.push_back(gameObject);
+	//creationQueue.push(gameObject);
+	return gameObject;
 }

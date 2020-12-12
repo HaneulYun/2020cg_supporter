@@ -7,12 +7,27 @@
 #include "Dependencies/glm/glm.hpp"
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
 #include <deque>
+#include <map>
 using namespace std;
 
+
 #include "Component.h"
+#include "Camera.h"
+
+#include "Mesh.h"
+#include "MeshFilter.h"
+
 #include "GameObject.h"
 #include "Scene.h"
+
+#include "Shader.h"
+
+#include "Graphics.h"
+
 #include "CyanFW.h"
 
 #endif

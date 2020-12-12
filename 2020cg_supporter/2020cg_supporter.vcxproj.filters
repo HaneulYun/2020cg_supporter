@@ -28,6 +28,24 @@
     <Filter Include="0_00_CyanFW\30_Component">
       <UniqueIdentifier>{e392b47e-1e74-45d2-92df-08a669d3c181}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0_00_CyanFW\31_Components">
+      <UniqueIdentifier>{b0a88f4f-55f5-4e28-a491-fd83ef89defb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0_00_CyanFW\01_Graphics">
+      <UniqueIdentifier>{36651ab2-7451-4ebb-9096-b68c59c2104f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0_00_CyanFW\02_Shader">
+      <UniqueIdentifier>{f6591868-8c9d-4f6c-9a6d-2459b061fff8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0_00_CyanFW\03_Mesh">
+      <UniqueIdentifier>{871f18f2-1d52-407e-97a2-2937d4435239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1_00_YellowProject">
+      <UniqueIdentifier>{ee79742e-87c3-4f0b-a64e-1a04d8524a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1_00_YellowProject\10_Scene">
+      <UniqueIdentifier>{25c3b68c-8cad-4c37-8db7-a0cb2b8457b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -48,6 +66,24 @@
     <ClCompile Include="Component.cpp">
       <Filter>0_00_CyanFW\30_Component</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>0_00_CyanFW\01_Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>0_00_CyanFW\02_Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>0_00_CyanFW\03_Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshFilter.cpp">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>1_00_YellowProject\10_Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -64,6 +100,24 @@
     </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>0_00_CyanFW\30_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>0_00_CyanFW\01_Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>0_00_CyanFW\02_Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>0_00_CyanFW\03_Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshFilter.h">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>1_00_YellowProject\10_Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,9 +1,11 @@
 #include "pch.h"
 #include "CyanFW.h"
+#include "GameScene.h"
 
 Scene* CyanFW::scene = nullptr;
+Graphics* CyanFW::graphics = nullptr;
 
-int CyanFW::run(int argc, char** argv)
+int CyanFW::Run(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
@@ -21,9 +23,10 @@ int CyanFW::run(int argc, char** argv)
 		std::cout << "GLEW 3.0 not supported\n ";
 	}
 
-	scene = new Scene();
+	scene = new GameScene();
+	scene->BuildObject();
 
-	glutDisplayFunc(update);
+	glutDisplayFunc(Update);
 	//glutIdleFunc(Idle);
 	//
 	//glutKeyboardFunc(KeyInput);
@@ -39,13 +42,30 @@ int CyanFW::run(int argc, char** argv)
 	return 0;
 }
 
-void CyanFW::update()
+void CyanFW::Update()
 {
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	scene->update();
-	scene->render();
+	scene->Update();
+	graphics->Render(scene);
+
+	static vector<float> vertices {
+   -1.0f, -1.0f, 0.0f,
+   1.0f, -1.0f, 0.0f,
+   0.0f,  1.0f, 0.0f,
+	};
+
+	GLuint vertexbuffer;
+	glGenBuffers(1, &vertexbuffer);
+	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
+	glBufferData(GL_ARRAY_BUFFER, vertices.size() * 4, vertices.data(), GL_STATIC_DRAW);
+
+	glEnableVertexAttribArray(0);
+	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0 );
+	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glDisableVertexAttribArray(0);
 
 	glutSwapBuffers();
 }
