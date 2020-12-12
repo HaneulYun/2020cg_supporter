@@ -8,6 +8,11 @@ void GameScene::BuildObject()
 	Mesh* mesh1 = new Mesh();
 
 	{
+		auto player = CreateEmpty();
+		camera = player->AddComponent<Camera>();
+	}
+
+	{
 		mesh0->vertices = {
 			-1.0f, -1.0f, 0.0f,
 			0.0f, -1.0f, 0.0f,

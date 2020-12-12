@@ -13,6 +13,8 @@ void Graphics::Render(Scene* scene)
 		for (auto& meshAndSets : renderSets)
 		{
 			auto mesh = meshAndSets.first;
+			if (!mesh) continue;
+			
 			auto& gameObjects = meshAndSets.second;
 
 			int attribPosition = glGetAttribLocation(shader, "a_Position");
