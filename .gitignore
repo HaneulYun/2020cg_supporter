@@ -14,11 +14,11 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/
+#[Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/
+#[Rr]elease/
 [Rr]eleases/
-x64/
+#x64/
 x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
@@ -26,6 +26,11 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+
+2020cg_supporter/[Dd]ebug/
+2020cg_supporter/[Rr]elease/
+2020cg_supporter/x64/
+*.exe
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
