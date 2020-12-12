@@ -3,5 +3,5 @@
 class Graphics
 {
 public:
-	void Render();
+	void Render(Scene* scene);
 };

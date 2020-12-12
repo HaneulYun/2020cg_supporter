@@ -57,6 +57,9 @@
     <ClCompile Include="Graphics.cpp">
       <Filter>0_00_CyanFW\01_Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="Graphics.h">
       <Filter>0_00_CyanFW\01_Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>0_00_CyanFW\31_Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

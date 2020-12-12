@@ -10,9 +10,12 @@
 #include <fstream>
 #include <string>
 #include <deque>
+#include <map>
 using namespace std;
 
 #include "Component.h"
+#include "Camera.h"
+
 #include "GameObject.h"
 #include "Scene.h"
 

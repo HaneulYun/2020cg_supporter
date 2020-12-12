@@ -46,7 +46,7 @@ void CyanFW::Update()
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	scene->Update();
-	graphics->Render();
+	graphics->Render(scene);
 
 	glutSwapBuffers();
 }
