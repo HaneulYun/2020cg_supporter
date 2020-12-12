@@ -15,6 +15,7 @@ GameObject* Scene::CreateEmpty()
 GameObject* Scene::AddGameObject(GameObject* gameObject)
 {
 	//gameObject->SetScene(this);
+	gameObject->scene = this;
 	gameObjects.push_back(gameObject);
 	//creationQueue.push(gameObject);
 	return gameObject;

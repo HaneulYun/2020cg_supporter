@@ -84,6 +84,12 @@
     <ClCompile Include="GameScene.cpp">
       <Filter>1_00_YellowProject\10_Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -118,6 +124,12 @@
     </ClInclude>
     <ClInclude Include="GameScene.h">
       <Filter>1_00_YellowProject\10_Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>0_00_CyanFW\31_Components</Filter>
     </ClInclude>
     <ClInclude Include="ReadObj.h">
       <Filter>헤더 파일</Filter>

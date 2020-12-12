@@ -5,6 +5,7 @@
 #include "Dependencies/glew.h"
 #include "Dependencies/freeglut.h"
 #include "Dependencies/glm/glm.hpp"
+#include "Dependencies/glm/gtx/transform.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -17,15 +18,18 @@ using namespace std;
 
 
 #include "Component.h"
+
+#include "Transform.h"
 #include "Camera.h"
 
 #include "Mesh.h"
 #include "MeshFilter.h"
 
+#include "Shader.h"
+#include "Renderer.h"
+
 #include "GameObject.h"
 #include "Scene.h"
-
-#include "Shader.h"
 
 #include "Graphics.h"
 
