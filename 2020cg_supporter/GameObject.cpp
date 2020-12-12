@@ -1,8 +1,14 @@
 #include "pch.h"
 #include "GameObject.h"
-
-void GameObject::update()
+;
+void GameObject::Start()
 {
 	for (auto component : components)
-		component->update();
+		component->Start();
+}
+
+void GameObject::Update()
+{
+	for (auto component : components)
+		component->Update();
 }

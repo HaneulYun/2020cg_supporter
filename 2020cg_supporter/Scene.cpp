@@ -1,13 +1,13 @@
 #include "pch.h"
 #include "Scene.h"
 
-void Scene::update()
+void Scene::Update()
 {
 	for (auto gameObject : gameObjects)
-		gameObject->update();
+		gameObject->Update();
 }
 
-void Scene::render()
+void Scene::Render()
 {
 	// ∞ÌπŒ¡ﬂ
 }

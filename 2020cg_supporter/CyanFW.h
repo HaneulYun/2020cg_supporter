@@ -6,7 +6,7 @@ private:
 	static Scene* scene;
 
 public:
-	int run(int, char**);
+	int Run(int, char**);
 
-	static void update();
+	static void Update();
 };

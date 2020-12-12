@@ -6,6 +6,6 @@ private:
 	deque<GameObject*> gameObjects;
 
 public:
-	void update();
-	void render();
+	void Update();
+	void Render();
 };

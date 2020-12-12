@@ -7,6 +7,8 @@
 #include "Dependencies/glm/glm.hpp"
 
 #include <iostream>
+#include <fstream>
+#include <string>
 #include <deque>
 using namespace std;
 

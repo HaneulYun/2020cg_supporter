@@ -6,5 +6,6 @@ private:
 	deque<Component*> components;
 
 public:
-	void update();
+	void Start();
+	void Update();
 };

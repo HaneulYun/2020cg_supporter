@@ -28,6 +28,9 @@
     <Filter Include="0_00_CyanFW\30_Component">
       <UniqueIdentifier>{e392b47e-1e74-45d2-92df-08a669d3c181}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0_00_CyanFW\31_Components">
+      <UniqueIdentifier>{b0a88f4f-55f5-4e28-a491-fd83ef89defb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">

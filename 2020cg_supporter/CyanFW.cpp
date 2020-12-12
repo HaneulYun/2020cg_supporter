@@ -3,7 +3,7 @@
 
 Scene* CyanFW::scene = nullptr;
 
-int CyanFW::run(int argc, char** argv)
+int CyanFW::Run(int argc, char** argv)
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
@@ -23,7 +23,7 @@ int CyanFW::run(int argc, char** argv)
 
 	scene = new Scene();
 
-	glutDisplayFunc(update);
+	glutDisplayFunc(Update);
 	//glutIdleFunc(Idle);
 	//
 	//glutKeyboardFunc(KeyInput);
@@ -39,13 +39,13 @@ int CyanFW::run(int argc, char** argv)
 	return 0;
 }
 
-void CyanFW::update()
+void CyanFW::Update()
 {
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	scene->update();
-	scene->render();
+	scene->Update();
+	scene->Render();
 
 	glutSwapBuffers();
 }

@@ -3,5 +3,6 @@
 class Component
 {
 public:
-	void update();
+	void Start();
+	void Update();
 };

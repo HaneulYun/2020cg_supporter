@@ -1,6 +1,10 @@
 #include "pch.h"
 #include "Component.h"
 
-void Component::update()
+void Component::Start()
+{
+}
+
+void Component::Update()
 {
 }
