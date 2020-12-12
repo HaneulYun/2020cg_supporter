@@ -13,6 +13,7 @@ void GameScene::BuildObject()
 
 	{
 		auto player = CreateEmpty();
+		player->AddComponent<Transform>()->position = { 0, 0, 3 };
 		camera = player->AddComponent<Camera>();
 	}
 
@@ -24,6 +25,7 @@ void GameScene::BuildObject()
 		};
 
 		auto cube = CreateEmpty();
+		cube->AddComponent<Transform>();
 		cube->AddComponent<MeshFilter>()->mesh = mesh0;
 		cube->AddComponent<Renderer>()->shader = shader;
 	}
@@ -36,6 +38,7 @@ void GameScene::BuildObject()
 		};
 
 		auto cube = CreateEmpty();
+		cube->AddComponent<Transform>();
 		cube->AddComponent<MeshFilter>()->mesh = mesh1;
 		cube->AddComponent<Renderer>()->shader = shader;
 	}

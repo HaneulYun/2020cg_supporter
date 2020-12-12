@@ -18,6 +18,8 @@ using namespace std;
 
 
 #include "Component.h"
+
+#include "Transform.h"
 #include "Camera.h"
 
 #include "Mesh.h"
