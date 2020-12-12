@@ -7,7 +7,12 @@
 #include "Dependencies/glm/glm.hpp"
 
 #include <iostream>
+#include <deque>
+using namespace std;
 
+#include "Component.h"
+#include "GameObject.h"
+#include "Scene.h"
 #include "CyanFW.h"
 
 #endif
