@@ -32,6 +32,11 @@ public:
 			transnform->position -= transnform->backword * speed * Time::deltaTime;
 		if (Input::GetKey(KeyCode::S))
 			transnform->position += transnform->backword * speed * Time::deltaTime;
+
+		if (Input::GetKey(KeyCode::Q))
+			transnform->position += transnform->up * speed * Time::deltaTime;
+		if (Input::GetKey(KeyCode::E))
+			transnform->position -= transnform->up* speed * Time::deltaTime;
 	}
 
 	// 필요한 경우 함수를 선언 및 정의 하셔도 됩니다.

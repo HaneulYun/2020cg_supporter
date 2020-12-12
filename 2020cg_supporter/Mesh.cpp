@@ -11,8 +11,12 @@ void Mesh::ReadObj(const char* _fileName)
         return;
     }
 
+    vector<glm::vec3> vertices;
+    vector<glm::vec3> normals;
+    vector<glm::vec2> uvs;
+
     string tempString;
-    float tempFloat;
+    float tempFloat, x, y, z;
 
     while (!in.eof())
     {
@@ -20,30 +24,18 @@ void Mesh::ReadObj(const char* _fileName)
 
         if (tempString.size() == 1 && tempString[0] == 'v')
         {
-            in >> tempFloat;
-            vertices.push_back(tempFloat);
-            in >> tempFloat;
-            vertices.push_back(tempFloat);
-            in >> tempFloat;
-            vertices.push_back(tempFloat);
+            in >> x >> y >> z;
+            vertices.emplace_back(x, y, z);
         }
         else if (tempString.size() == 2 && tempString[0] == 'v' && tempString[1] == 'n')
         {
-            in >> tempFloat;
-            uvs.push_back(tempFloat);
-            in >> tempFloat;
-            uvs.push_back(tempFloat);
-            in >> tempFloat;
-            uvs.push_back(tempFloat);
+            in >> x >> y >> z;
+            normals.emplace_back(x, y, z);
         }
         else if (tempString.size() == 2 && tempString[0] == 'v' && tempString[1] == 't')
         {
-            in >> tempFloat;
-            textures.push_back(tempFloat);
-            in >> tempFloat;
-            textures.push_back(tempFloat);
-            in >> tempFloat;
-            textures.push_back(tempFloat);
+            in >> x >> y >> z;
+            uvs.emplace_back(x, y);
         }
         else if (tempString.size() == 1 && tempString[0] == 'f')
         {
@@ -54,14 +46,17 @@ void Mesh::ReadObj(const char* _fileName)
                 istringstream iss(tempString);
 
                 std::getline(iss, tempString, '/');
-                verticesIndex.push_back(atoi(tempString.c_str()) - 1);
+                verticesIndices.push_back(atoi(tempString.c_str()) - 1);
 
                 std::getline(iss, tempString, '/');
-                texturesIndex.push_back(atoi(tempString.c_str()) - 1);
-
+                uvsIndices.push_back(atoi(tempString.c_str()) - 1);
+                
                 std::getline(iss, tempString, '/');
-                uvsIndex.push_back(atoi(tempString.c_str()) - 1);
+                normalsIndices.push_back(atoi(tempString.c_str()) - 1);
             }
         }
     }
+
+    for (unsigned int i = 0; i < verticesIndices.size(); ++i)
+        this->vertices.emplace_back(vertices[verticesIndices[i]]);
 }

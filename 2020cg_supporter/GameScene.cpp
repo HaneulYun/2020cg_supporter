@@ -10,7 +10,8 @@ void GameScene::BuildObject()
     }
 
     Mesh* mesh = new Mesh();
-    mesh->ReadObj("Models/robot.obj");
+    mesh->ReadObj("Models/blue_robot.obj");
+    mesh->Init();
 
     {
         auto player = CreateEmpty();
@@ -19,11 +20,57 @@ void GameScene::BuildObject()
         player->AddComponent<Controller>();
     }
 
-    auto cube = CreateEmpty();
-    cube->AddComponent<Transform>()->position = {0, 0, 0};
-    cube->AddComponent<MeshFilter>()->mesh = mesh;
-    cube->AddComponent<Renderer>()->shader = shader;
-    cube->AddComponent<RotatingBehavior>();
-}
+    Mesh* mesh0 = new Mesh();
+    mesh0->vertices = {
+        { -1.0f,-1.0f,-1.0f } ,
+        { -1.0f,-1.0f, 1.0f } ,
+        { -1.0f, 1.0f, 1.0f } ,
+        { 1.0f, 1.0f,-1.0f  } ,
+        { -1.0f,-1.0f,-1.0f } ,
+        { -1.0f, 1.0f,-1.0f } ,
+        { 1.0f,-1.0f, 1.0f  } ,
+        { -1.0f,-1.0f,-1.0f } ,
+        { 1.0f,-1.0f,-1.0f  } ,
+        { 1.0f, 1.0f,-1.0f  } ,
+        { 1.0f,-1.0f,-1.0f  } ,
+        { -1.0f,-1.0f,-1.0f } ,
+        { -1.0f,-1.0f,-1.0f } ,
+        { -1.0f, 1.0f, 1.0f } ,
+        { -1.0f, 1.0f,-1.0f } ,
+        { 1.0f,-1.0f, 1.0f  } ,
+        { -1.0f,-1.0f, 1.0f } ,
+        { -1.0f,-1.0f,-1.0f } ,
+        { -1.0f, 1.0f, 1.0f } ,
+        { -1.0f,-1.0f, 1.0f } ,
+        { 1.0f,-1.0f, 1.0f  } ,
+        { 1.0f, 1.0f, 1.0f  } ,
+        { 1.0f,-1.0f,-1.0f  } ,
+        { 1.0f, 1.0f,-1.0f  } ,
+        { 1.0f,-1.0f,-1.0f  } ,
+        { 1.0f, 1.0f, 1.0f  } ,
+        { 1.0f,-1.0f, 1.0f  } ,
+        { 1.0f, 1.0f, 1.0f  } ,
+        { 1.0f, 1.0f,-1.0f  } ,
+        { -1.0f, 1.0f,-1.0f } ,
+        { 1.0f, 1.0f, 1.0f  } ,
+        { -1.0f, 1.0f,-1.0f } ,
+        { -1.0f, 1.0f, 1.0f } ,
+        { 1.0f, 1.0f, 1.0f  } ,
+        { -1.0f, 1.0f, 1.0f } ,
+        { 1.0f,-1.0f, 1.0f  }
+    };
+    mesh0->Init();
 
+    for (int i = -3; i <= 3; ++i)
+        for (int j = -3; j <= 3; ++j)
+            for (int k = -3; k <= 3; ++k)
+            {
+                auto cube = CreateEmpty();
+                cube->AddComponent<Transform>()->position = { i * 10, j * 10, k * 10 };
+
+                cube->AddComponent<MeshFilter>()->mesh = (!i && !j && !k) ? mesh : mesh0;
+                cube->AddComponent<Renderer>()->shader = shader;
+                cube->AddComponent<RotatingBehavior>();
+            }
+}
 
