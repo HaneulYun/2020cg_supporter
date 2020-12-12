@@ -4,9 +4,30 @@
 void GameScene::BuildObject()
 {
 	Shader* shader = nullptr;// new Shader();
-	Mesh* tri = new Mesh();
+	Mesh* mesh0 = new Mesh();
+	Mesh* mesh1 = new Mesh();
 
-	auto cube = CreateEmpty();
-	cube->AddComponent<MeshFilter>()->mesh = tri;
-	cube->AddComponent<Renderer>()->shader = shader;
+	{
+		mesh0->vertices = {
+			-1.0f, -1.0f, 0.0f,
+			0.0f, -1.0f, 0.0f,
+			-1.0f, 0.0f, 0.0f,
+		};
+
+		auto cube = CreateEmpty();
+		cube->AddComponent<MeshFilter>()->mesh = mesh0;
+		cube->AddComponent<Renderer>()->shader = shader;
+	}
+
+	{
+		mesh1->vertices = {
+			1.0f, 0.0f, 0.0f,
+			1.0f, 1.0f, 0.0f,
+			0.0f, 1.0f, 0.0f,
+		};
+
+		auto cube = CreateEmpty();
+		cube->AddComponent<MeshFilter>()->mesh = mesh1;
+		cube->AddComponent<Renderer>()->shader = shader;
+	}
 }

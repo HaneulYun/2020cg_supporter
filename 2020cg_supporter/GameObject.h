@@ -3,9 +3,13 @@
 class GameObject
 {
 private:
+	bool isStarted{ false };
+
 	deque<Component*> components;
 
 public:
+	class Scene* scene;
+
 	void Start();
 	void Update();
 
@@ -15,8 +19,8 @@ public:
 	template <typename T>
 	T* AddComponent();
 	
-	//template <typename T>
-	//T* GetComponent();
+	template <typename T>
+	T* GetComponent();
 };
 
 template<typename T>
@@ -36,4 +40,13 @@ inline T* GameObject::AddComponent()
 	//	renderer = component;
 
 	return dynamic_cast<T*>(component);
+}
+
+template<typename T>
+inline T* GameObject::GetComponent()
+{
+	for (Component* component : components)
+		if (typeid(*component).name() == typeid(T).name())
+			return dynamic_cast<T*>(component);
+	return nullptr;
 }
