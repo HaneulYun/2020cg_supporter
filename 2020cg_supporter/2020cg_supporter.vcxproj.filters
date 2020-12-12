@@ -34,6 +34,9 @@
     <Filter Include="0_00_CyanFW\01_Graphics">
       <UniqueIdentifier>{36651ab2-7451-4ebb-9096-b68c59c2104f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0_00_CyanFW\02_Shader">
+      <UniqueIdentifier>{f6591868-8c9d-4f6c-9a6d-2459b061fff8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -60,6 +63,9 @@
     <ClCompile Include="Camera.cpp">
       <Filter>0_00_CyanFW\31_Components</Filter>
     </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>0_00_CyanFW\02_Shader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -82,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="Camera.h">
       <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>0_00_CyanFW\02_Shader</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

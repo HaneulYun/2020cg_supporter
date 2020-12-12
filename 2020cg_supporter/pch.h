@@ -19,6 +19,8 @@ using namespace std;
 #include "GameObject.h"
 #include "Scene.h"
 
+#include "Shader.h"
+
 #include "Graphics.h"
 
 #include "CyanFW.h"

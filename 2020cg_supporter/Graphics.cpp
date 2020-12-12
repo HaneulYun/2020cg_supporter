@@ -5,7 +5,7 @@ void Graphics::Render(Scene* scene)
 {
 	for (auto& shaderAndSets : scene->renderSets)
 	{
-		auto shader = shaderAndSets.first;
+		auto shader = shaderAndSets.first->shader;
 		auto& renderSets = shaderAndSets.second;
 
 		glUseProgram(shader);
