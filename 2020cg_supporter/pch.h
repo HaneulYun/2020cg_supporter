@@ -21,10 +21,11 @@ using namespace std;
 #include "Mesh.h"
 #include "MeshFilter.h"
 
+#include "Shader.h"
+#include "Renderer.h"
+
 #include "GameObject.h"
 #include "Scene.h"
-
-#include "Shader.h"
 
 #include "Graphics.h"
 

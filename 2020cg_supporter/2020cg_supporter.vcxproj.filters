@@ -84,6 +84,9 @@
     <ClCompile Include="GameScene.cpp">
       <Filter>1_00_YellowProject\10_Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -118,6 +121,9 @@
     </ClInclude>
     <ClInclude Include="GameScene.h">
       <Filter>1_00_YellowProject\10_Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>0_00_CyanFW\31_Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
