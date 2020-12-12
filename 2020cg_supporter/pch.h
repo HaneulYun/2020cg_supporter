@@ -10,10 +10,12 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <numeric>
 #include <string>
 #include <vector>
 #include <deque>
 #include <map>
+#include <unordered_map>
 using namespace std;
 
 #include "Singleton.h"
