@@ -20,7 +20,7 @@ public:
 
 	void Update(/*업데이트 코드를 작성하세요.*/)
 	{
-		gameObject->GetComponent<Transform>()->locatToWorldMatrix = glm::rotate(gameObject->GetComponent<Transform>()->locatToWorldMatrix, 0.005f, glm::vec3{ 0, 1, 0 });
+		gameObject->GetComponent<Transform>()->locatToWorldMatrix = glm::rotate(gameObject->GetComponent<Transform>()->locatToWorldMatrix, glm::radians(90 * Time::deltaTime), glm::vec3{ 0, 1, 0 });
 	}
 
 	// 필요한 경우 함수를 선언 및 정의 하셔도 됩니다.

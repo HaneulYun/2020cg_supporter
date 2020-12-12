@@ -18,6 +18,7 @@ using namespace std;
 
 #include "Singleton.h"
 #include "Input.h"
+#include "Time.h"
 
 #include "Component.h"
 

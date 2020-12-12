@@ -80,8 +80,12 @@ void CyanFW::Update()
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 
+	Time::Instance()->Update();
+
 	scene->Update();
 	graphics->Render(scene);
+
+	Input::Instance()->Update();
 
 	static vector<float> vertices{
    -1.0f, -1.0f, 0.0f,
