@@ -43,3 +43,5 @@ void GameScene::BuildObject()
 		cube->AddComponent<Renderer>()->shader = shader;
 	}
 }
+
+
