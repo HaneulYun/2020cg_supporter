@@ -40,6 +40,12 @@
     <Filter Include="0_00_CyanFW\03_Mesh">
       <UniqueIdentifier>{871f18f2-1d52-407e-97a2-2937d4435239}</UniqueIdentifier>
     </Filter>
+    <Filter Include="1_00_YellowProject">
+      <UniqueIdentifier>{ee79742e-87c3-4f0b-a64e-1a04d8524a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1_00_YellowProject\10_Scene">
+      <UniqueIdentifier>{25c3b68c-8cad-4c37-8db7-a0cb2b8457b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -75,6 +81,9 @@
     <ClCompile Include="MeshFilter.cpp">
       <Filter>0_00_CyanFW\31_Components</Filter>
     </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>1_00_YellowProject\10_Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -106,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="MeshFilter.h">
       <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GameScene.h">
+      <Filter>1_00_YellowProject\10_Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CyanFW.h"
+#include "GameScene.h"
 
 Scene* CyanFW::scene = nullptr;
 Graphics* CyanFW::graphics = nullptr;
@@ -22,7 +23,8 @@ int CyanFW::Run(int argc, char** argv)
 		std::cout << "GLEW 3.0 not supported\n ";
 	}
 
-	scene = new Scene();
+	scene = new GameScene();
+	scene->BuildObject();
 
 	glutDisplayFunc(Update);
 	//glutIdleFunc(Idle);
