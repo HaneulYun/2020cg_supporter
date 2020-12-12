@@ -1,9 +1,4 @@
 ﻿#include "pch.h"
-#include "Dependencies/glew.h"
-#include "Dependencies/freeglut.h"
-//#include "Dependencies/glm/glm.hpp"
-
-#include <iostream>
 
 void renderFunc()
 {
