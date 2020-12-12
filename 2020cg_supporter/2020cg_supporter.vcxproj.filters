@@ -16,6 +16,9 @@
     <Filter Include="0_00_CyanFW">
       <UniqueIdentifier>{a1cb725c-af91-4d9f-ab55-e408d5f8053d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0_00_CyanFW\00_Core">
+      <UniqueIdentifier>{53885e32-f595-4153-b209-e8dc4f1ddb61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -24,10 +27,16 @@
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="CyanFW.cpp">
+      <Filter>0_00_CyanFW\00_Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CyanFW.h">
+      <Filter>0_00_CyanFW\00_Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
