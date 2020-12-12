@@ -105,6 +105,9 @@
     <ClCompile Include="Singleton.cpp">
       <Filter>0_00_CyanFW\90_ETC</Filter>
     </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>0_00_CyanFW\40_Interface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -160,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="Singleton.h">
       <Filter>0_00_CyanFW\90_ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>0_00_CyanFW\40_Interface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

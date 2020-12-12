@@ -17,6 +17,7 @@
 using namespace std;
 
 #include "Singleton.h"
+#include "Input.h"
 
 #include "Component.h"
 

@@ -63,14 +63,12 @@ int CyanFW::Run(int argc, char** argv)
 
 	glutDisplayFunc(Update);
 	glutIdleFunc(Update);
-	//
-	//glutKeyboardFunc(KeyInput);
-	//glutKeyboardUpFunc(KeyUpInput);
-	//glutSpecialFunc(SpecialKeyInput);
-	//glutSpecialUpFunc(SpecialKeyUpInput);
-	//glutKeyboardUpFunc(KeyUpInput);
-	//
-	//glutMouseFunc(MouseInput);
+	
+	glutMouseFunc(MouseInput);
+	glutKeyboardFunc(KeyInput);
+	glutKeyboardUpFunc(KeyUpInput);
+	glutSpecialFunc(SpecialKeyInput);
+	glutSpecialUpFunc(SpecialKeyUpInput);
 
 	glutMainLoop();
 
