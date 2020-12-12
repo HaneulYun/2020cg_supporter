@@ -28,6 +28,7 @@ class Mesh
 {
 public:
     GLuint verticesBuffer;
+    GLuint uvsBuffer;
 
     vector<glm::vec3> vertices;
     vector<glm::vec3> normals;
@@ -42,6 +43,10 @@ public:
         glGenBuffers(1, &verticesBuffer);
         glBindBuffer(GL_ARRAY_BUFFER, verticesBuffer);
         glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(glm::vec3), vertices.data(), GL_STATIC_DRAW);
+        
+        glGenBuffers(1, &uvsBuffer);
+        glBindBuffer(GL_ARRAY_BUFFER, uvsBuffer);
+        glBufferData(GL_ARRAY_BUFFER, uvs.size() * sizeof(glm::vec2), uvs.data(), GL_STATIC_DRAW);
     }
 
     void indexVBO(

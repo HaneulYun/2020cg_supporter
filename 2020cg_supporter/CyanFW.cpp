@@ -32,6 +32,9 @@ int CyanFW::Run(int argc, char** argv)
 	glutSpecialFunc(SpecialKeyInput);
 	glutSpecialUpFunc(SpecialKeyUpInput);
 
+	glEnable(GL_DEPTH_TEST);
+	//glDepthFunc(GL_LESS);
+
 	glutMainLoop();
 
 	return 0;
@@ -40,7 +43,7 @@ int CyanFW::Run(int argc, char** argv)
 void CyanFW::Update()
 {
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	Time::Instance()->Update();
 

@@ -58,5 +58,10 @@ void Mesh::ReadObj(const char* _fileName)
     }
 
     for (unsigned int i = 0; i < verticesIndices.size(); ++i)
+    {
         this->vertices.emplace_back(vertices[verticesIndices[i]]);
+        auto uv = uvs[uvsIndices[i]];
+        uv.y = 1 - uv.y;
+        this->uvs.emplace_back(uv);
+    }
 }
