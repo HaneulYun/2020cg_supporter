@@ -37,6 +37,9 @@
     <Filter Include="0_00_CyanFW\02_Shader">
       <UniqueIdentifier>{f6591868-8c9d-4f6c-9a6d-2459b061fff8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0_00_CyanFW\03_Mesh">
+      <UniqueIdentifier>{871f18f2-1d52-407e-97a2-2937d4435239}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -66,6 +69,12 @@
     <ClCompile Include="Shader.cpp">
       <Filter>0_00_CyanFW\02_Shader</Filter>
     </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>0_00_CyanFW\03_Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshFilter.cpp">
+      <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -91,6 +100,12 @@
     </ClInclude>
     <ClInclude Include="Shader.h">
       <Filter>0_00_CyanFW\02_Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>0_00_CyanFW\03_Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshFilter.h">
+      <Filter>0_00_CyanFW\31_Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

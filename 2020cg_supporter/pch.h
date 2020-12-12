@@ -13,8 +13,12 @@
 #include <map>
 using namespace std;
 
+
 #include "Component.h"
 #include "Camera.h"
+
+#include "Mesh.h"
+#include "MeshFilter.h"
 
 #include "GameObject.h"
 #include "Scene.h"
