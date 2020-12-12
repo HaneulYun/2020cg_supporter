@@ -62,7 +62,7 @@ int CyanFW::Run(int argc, char** argv)
 	//glEnableVertexAttribArray(2);
 
 	glutDisplayFunc(Update);
-	//glutIdleFunc(Idle);
+	glutIdleFunc(Update);
 	//
 	//glutKeyboardFunc(KeyInput);
 	//glutKeyboardUpFunc(KeyUpInput);

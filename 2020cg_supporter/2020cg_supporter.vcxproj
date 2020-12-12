@@ -187,7 +187,10 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ReadObj.h" />
+    <ClInclude Include="RotatingBehavior.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="ScriptForm.h" />
+    <ClInclude Include="scripts.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>

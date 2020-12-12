@@ -46,6 +46,12 @@
     <Filter Include="1_00_YellowProject\10_Scene">
       <UniqueIdentifier>{25c3b68c-8cad-4c37-8db7-a0cb2b8457b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="1_00_YellowProject\20_Scripts">
+      <UniqueIdentifier>{a34b702e-452e-487f-a8b2-b371c6998a1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1_00_YellowProject\20_Scripts\Form">
+      <UniqueIdentifier>{156d5832-c6c1-453f-be7d-825d2f57d96f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -133,6 +139,15 @@
     </ClInclude>
     <ClInclude Include="ReadObj.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptForm.h">
+      <Filter>1_00_YellowProject\20_Scripts\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatingBehavior.h">
+      <Filter>1_00_YellowProject\20_Scripts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

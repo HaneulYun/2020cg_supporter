@@ -45,7 +45,7 @@ void Graphics::Render(Scene* scene)
 				int modelID = glGetUniformLocation(shader, "Model");
 				glUniformMatrix4fv(modelID, 1, GL_FALSE, &transform->locatToWorldMatrix[0][0]);
 
-				glDrawArrays(GL_TRIANGLES, 0, 3);
+				glDrawArrays(GL_TRIANGLES, 0, 12*3);
 			}
 			glDisableVertexAttribArray(0);
 		}
