@@ -167,5 +167,8 @@
     <ClInclude Include="Input.h">
       <Filter>0_00_CyanFW\40_Interface</Filter>
     </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>1_00_YellowProject\20_Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
