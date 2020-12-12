@@ -31,6 +31,9 @@
     <Filter Include="0_00_CyanFW\31_Components">
       <UniqueIdentifier>{b0a88f4f-55f5-4e28-a491-fd83ef89defb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0_00_CyanFW\01_Graphics">
+      <UniqueIdentifier>{36651ab2-7451-4ebb-9096-b68c59c2104f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -51,6 +54,9 @@
     <ClCompile Include="Component.cpp">
       <Filter>0_00_CyanFW\30_Component</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>0_00_CyanFW\01_Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -67,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>0_00_CyanFW\30_Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>0_00_CyanFW\01_Graphics</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

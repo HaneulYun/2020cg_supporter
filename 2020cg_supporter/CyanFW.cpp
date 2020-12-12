@@ -2,6 +2,7 @@
 #include "CyanFW.h"
 
 Scene* CyanFW::scene = nullptr;
+Graphics* CyanFW::graphics = nullptr;
 
 int CyanFW::Run(int argc, char** argv)
 {
@@ -45,7 +46,7 @@ void CyanFW::Update()
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	scene->Update();
-	scene->Render();
+	graphics->Render();
 
 	glutSwapBuffers();
 }
