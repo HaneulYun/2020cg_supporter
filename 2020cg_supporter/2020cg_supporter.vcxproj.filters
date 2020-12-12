@@ -52,6 +52,12 @@
     <Filter Include="1_00_YellowProject\20_Scripts\Form">
       <UniqueIdentifier>{156d5832-c6c1-453f-be7d-825d2f57d96f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="0_00_CyanFW\40_Interface">
+      <UniqueIdentifier>{4cfd111f-0f13-4ec4-a425-2e6deb8ae8c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0_00_CyanFW\90_ETC">
+      <UniqueIdentifier>{cb1f750d-4957-4172-82c6-b3b71de82a00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="2020cg_supporter.cpp">
@@ -95,6 +101,9 @@
     </ClCompile>
     <ClCompile Include="Transform.cpp">
       <Filter>0_00_CyanFW\31_Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Singleton.cpp">
+      <Filter>0_00_CyanFW\90_ETC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="RotatingBehavior.h">
       <Filter>1_00_YellowProject\20_Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>0_00_CyanFW\90_ETC</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

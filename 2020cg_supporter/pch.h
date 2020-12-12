@@ -16,6 +16,7 @@
 #include <map>
 using namespace std;
 
+#include "Singleton.h"
 
 #include "Component.h"
 
