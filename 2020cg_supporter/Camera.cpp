@@ -10,9 +10,6 @@ void Camera::Start()
 void Camera::Update()
 {
 	auto transform = gameObject->GetComponent<Transform>();
-
 	if (transform)
-		view = glm::lookAt(glm::vec3{ transform->position.x, transform->position.y + 1, transform->position.z + 3 },
-			glm::vec3{ transform->position.x, transform->position.y + 1, transform->position.z + 3 } + transform->Forward(),
-			glm::vec3(0, 1, 0));
+		view = glm::lookAt(transform->position, transform->position + transform->Forward(), glm::vec3(0, 1, 0));
 }
