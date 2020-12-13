@@ -21,7 +21,7 @@ public:
 	static bool keys[512];
 	static bool keyUp[512];
 	static bool keyDown[512];
-	static bool mouses[5];
+	static bool mouses[3];
 	static bool mouseUp[3];
 	static bool mouseDown[3];
 

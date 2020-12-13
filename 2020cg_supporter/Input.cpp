@@ -7,7 +7,7 @@ glm::vec2 Input::mouseOffset;
 bool Input::keys[512];
 bool Input::keyUp[512];
 bool Input::keyDown[512];
-bool Input::mouses[5];
+bool Input::mouses[3];
 bool Input::mouseUp[3];
 bool Input::mouseDown[3];
 

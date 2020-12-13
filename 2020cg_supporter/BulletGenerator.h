@@ -31,7 +31,9 @@ public:
 	void Update(/*업데이트 코드를 작성하세요.*/)
 	{
 		if (!Input::Instance()->GetMouseButtonDown(MouseCode::Left))
+		{
 			return;
+		}
 
 		{
 			auto bullet = gameObject->scene->CreateEmpty();

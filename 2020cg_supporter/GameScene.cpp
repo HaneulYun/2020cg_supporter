@@ -51,6 +51,7 @@ void GameScene::BuildObject()
         player->AddComponent<Controller>();
         player->AddComponent<BulletGenerator>();
         player->AddComponent<Gravity>();
+        player->AddComponent<CrossHair>();
 
         auto rifle = CreateEmpty();
         auto rifleTrans = rifle->AddComponent<Transform>();
