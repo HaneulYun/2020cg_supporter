@@ -27,7 +27,7 @@ int CyanFW::Run(int argc, char** argv)
 
 	glutDisplayFunc(Update);
 	glutIdleFunc(Update);
-
+	
 	glutMouseFunc(MouseInput);
 	glutPassiveMotionFunc(PassiveMouseInput);
 	glutKeyboardFunc(KeyInput);
