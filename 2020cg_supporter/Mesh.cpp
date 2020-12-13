@@ -25,6 +25,13 @@ void Mesh::ReadObj(const char* _fileName)
         if (tempString.size() == 1 && tempString[0] == 'v')
         {
             in >> x >> y >> z;
+            width[0] = min(width[0], x);
+            width[1] = max(width[1], x);
+            height[0] = min(height[0], y);
+            height[1] = max(height[1], y);
+            depth[0] = min(depth[0], z);
+            depth[1] = max(depth[1], z);
+
             vertices.emplace_back(x, y, z);
         }
         else if (tempString.size() == 2 && tempString[0] == 'v' && tempString[1] == 'n')

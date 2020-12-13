@@ -7,3 +7,5 @@
 #include "FirstPersonCamera.h"
 #include "Bullet.h"
 #include "BulletGenerator.h"
+#include "Gravity.h"
+#include "Log.h"

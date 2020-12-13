@@ -20,4 +20,9 @@ public:
 	{
 		return -backword;
 	}
+
+	glm::mat4 Scale(glm::vec3 vec)
+	{
+		return locatToWorldMatrix =  glm::scale(locatToWorldMatrix, vec);
+	}
 };

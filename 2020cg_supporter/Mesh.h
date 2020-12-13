@@ -30,6 +30,10 @@ public:
     GLuint verticesBuffer;
     GLuint uvsBuffer;
 
+    float width[2]{ 0, };
+    float height[2]{ 0, };
+    float depth[2]{ 0, };
+
     vector<glm::vec3> vertices;
     vector<glm::vec3> normals;
     vector<glm::vec2> uvs;

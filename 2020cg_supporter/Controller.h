@@ -5,8 +5,14 @@ class Controller : public Component
 private /*이 영역에 private 변수를 선언하세요.*/:
 	float speed = 10.0f;
 
-public  /*이 영역에 public 변수를 선언하세요.*/:
+	glm::vec3 velocity = glm::vec3();
+	float jumpTimer = 0.0f;	
+	float jumpForce = 7.0f;
 
+	Transform* transform;
+
+public  /*이 영역에 public 변수를 선언하세요.*/:
+	bool isJump = false;
 protected:
 	friend class GameObject;
 	Controller() = default;
@@ -17,26 +23,36 @@ public:
 
 	void Start(/*초기화 코드를 작성하세요.*/)
 	{
+		transform = gameObject->GetComponent<Transform>();
 	}
 
 	void Update(/*업데이트 코드를 작성하세요.*/)
 	{
-		auto transnform = gameObject->GetComponent<Transform>();
+
+		//cout << transform->position.x <<" " << transform->position.y <<	" " << transform->position.z << "\n";
 
 		if (Input::GetKey(KeyCode::A))
-			transnform->position -= transnform->right * speed * Time::deltaTime;
+			transform->position -= transform->right * speed * Time::deltaTime;
 		if (Input::GetKey(KeyCode::D))
-			transnform->position += transnform->right * speed * Time::deltaTime;
+			transform->position += transform->right * speed * Time::deltaTime;
 
 		if (Input::GetKey(KeyCode::W))
-			transnform->position -= transnform->backword * speed * Time::deltaTime;
+			transform->position -= glm::normalize(glm::vec3(transform->backword.x, 0, transform->backword.z)) * speed * Time::deltaTime;
 		if (Input::GetKey(KeyCode::S))
-			transnform->position += transnform->backword * speed * Time::deltaTime;
+			transform->position += glm::normalize(glm::vec3(transform->backword.x, 0, transform->backword.z)) * speed * Time::deltaTime;
 
-		if (Input::GetKey(KeyCode::Q))
-			transnform->position += transnform->up * speed * Time::deltaTime;
-		if (Input::GetKey(KeyCode::E))
-			transnform->position -= transnform->up* speed * Time::deltaTime;
+		if (Input::GetKey(KeyCode::SPACE) && !isJump)
+			isJump = true;
+
+		if (isJump)
+			Jump();
+	}
+
+	void Jump()
+	{
+		velocity = glm::vec3(0, 1, 0) * jumpForce;
+
+		transform->position += velocity * Time::deltaTime;
 	}
 
 	// 필요한 경우 함수를 선언 및 정의 하셔도 됩니다.
