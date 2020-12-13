@@ -5,7 +5,8 @@ class Transform : public Component
 public:
 	union
 	{
-		glm::mat4 locatToWorldMatrix = glm::mat4(1);
+		glm::mat4 locatToWorldMatrix = glm::mat4(1.0f);
+		glm::mat4 locatToParentMatrix;
 		struct
 		{
 			glm::vec3 right;	float _00; 
