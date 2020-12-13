@@ -3,12 +3,17 @@
 class Time : public Singleton<Time>
 {
 private:
-	long long oldTime{ 0 };
-	long long curTime{ 0 };
+	std::chrono::system_clock::time_point mCurTime;
+	std::chrono::system_clock::time_point mPreTime;
 
+	void CalDeltaTime();
+	void SetCurTime();
+	void SetPreTime();
 public:
 	static float deltaTime;
 
 public:
 	void Update();
+
+	float GetDeltaTime();
 };

@@ -19,13 +19,15 @@ void Input::Update()
 		ref = false;
 	for (auto& ref : mouseDown)
 		ref = false;
+}
 
+void Input::TrappedMouse()
+{
 	mouseOffset.x = mousePosition.x - WIDDOW_WIDTH * 0.5f;
 	mouseOffset.y = WINDOW_HEIGHT * 0.5f - mousePosition.y;
-	
-	if (mousePosition.x != WIDDOW_WIDTH * 0.5f || mousePosition.y != WINDOW_HEIGHT * 0.5f) 
-		glutWarpPointer(WIDDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f);
 
+	if (mousePosition.x != WIDDOW_WIDTH * 0.5f || mousePosition.y != WINDOW_HEIGHT * 0.5f)
+		glutWarpPointer(WIDDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f);
 }
 
 bool Input::GetKey(KeyCode key)

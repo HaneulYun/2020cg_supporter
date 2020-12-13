@@ -158,9 +158,6 @@
     <ClInclude Include="Transform.h">
       <Filter>0_00_CyanFW\31_Components</Filter>
     </ClInclude>
-    <ClInclude Include="ReadObj.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="ScriptForm.h">
       <Filter>1_00_YellowProject\20_Scripts\Form</Filter>
     </ClInclude>
@@ -189,6 +186,12 @@
       <Filter>1_00_YellowProject\20_Scripts</Filter>
     </ClInclude>
     <ClInclude Include="FirstPersonCamera.h">
+      <Filter>1_00_YellowProject\20_Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletGenerator.h">
+      <Filter>1_00_YellowProject\20_Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
       <Filter>1_00_YellowProject\20_Scripts</Filter>
     </ClInclude>
   </ItemGroup>

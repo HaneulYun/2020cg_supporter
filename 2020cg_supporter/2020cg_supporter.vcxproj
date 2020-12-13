@@ -181,6 +181,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Attach.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletGenerator.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Controller.h" />
@@ -195,7 +197,6 @@
     <ClInclude Include="MeshFilter.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Renderer.h" />
-    <ClInclude Include="ReadObj.h" />
     <ClInclude Include="RotatingBehavior.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="ScriptForm.h" />
