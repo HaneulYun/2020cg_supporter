@@ -7,16 +7,26 @@ enum class KeyCode
 	UpArrow = 273, DownArrow, RightArrow, LeftArrow,
 };
 
+enum class MouseCode
+{
+	Left = 0, WheelButton, Right, WheelUp, WheelDown
+};
+
 class Input : public Singleton<Input>
 {
 public:
 	static glm::vec2 mousePosition;
+	static glm::vec2 mouseOffset;
+
 	static bool keys[512];
 	static bool keyUp[512];
 	static bool keyDown[512];
-	static bool mouses[3];
+	static bool mouses[5];
 	static bool mouseUp[3];
 	static bool mouseDown[3];
+
+	static const int WIDDOW_WIDTH = 1280;
+	static const int WINDOW_HEIGHT = 720;
 
 public:
 	Input() {};
@@ -26,7 +36,10 @@ public:
 	static bool GetKey(KeyCode key);
 	static bool GetKeyUp(KeyCode key);
 	static bool GetKeyDown(KeyCode key);
-	static bool GetMouseButton(int button);
-	static bool GetMouseButtonUp(int button);
-	static bool GetMouseButtonDown(int button);
+	static bool GetMouseButton(MouseCode button);
+	static bool GetMouseButtonUp(MouseCode button);
+	static bool GetMouseButtonDown(MouseCode button);
+
+private:
+	static bool firstMove;
 };

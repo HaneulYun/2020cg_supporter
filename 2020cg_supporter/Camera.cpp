@@ -1,10 +1,10 @@
-#include "pch.h"
+ï»¿#include "pch.h"
 #include "Camera.h"
 
 void Camera::Start()
 {
 	proj = glm::perspective(glm::radians(FOV), (float)500 / (float)500, Near, Far);
-	//glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, 0.0f, 100.0f); // ¿ùµå ÁÂÇ¥·Î Ç¥Çö
+	//glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, 0.0f, 100.0f); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç¥ï¿½ï¿½ Ç¥ï¿½ï¿½
 }
 
 void Camera::Update()
