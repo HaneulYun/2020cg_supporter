@@ -11,7 +11,7 @@ int CyanFW::Run(int argc, char** argv)
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(0, 0);
-	glutInitWindowSize(Input::Instance()->WIDDOW_WIDTH, Input::Instance()->WINDOW_HEIGHT);
+	glutInitWindowSize(500, 500);
 	glutCreateWindow("BootCamp");
 
 	if (glewInit() != GLEW_OK) {
@@ -20,8 +20,6 @@ int CyanFW::Run(int argc, char** argv)
 	}
 	else std::cout << "GLEW Initialized\n";
 
-	glutSetCursor(GLUT_CURSOR_NONE);
-
 	scene = new GameScene();
 	scene->BuildObject();
 
@@ -29,7 +27,6 @@ int CyanFW::Run(int argc, char** argv)
 	glutIdleFunc(Update);
 	
 	glutMouseFunc(MouseInput);
-	glutPassiveMotionFunc(PassiveMouseInput);
 	glutKeyboardFunc(KeyInput);
 	glutKeyboardUpFunc(KeyUpInput);
 	glutSpecialFunc(SpecialKeyInput);
@@ -49,7 +46,6 @@ void CyanFW::Update()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	Time::Instance()->Update();
-	Input::Instance()->Update();
 
 	scene->Update();
 	graphics->Render(scene);
