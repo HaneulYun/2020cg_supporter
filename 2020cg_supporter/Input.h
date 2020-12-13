@@ -27,6 +27,7 @@ public:
 
 	static const int WIDDOW_WIDTH = 1280;
 	static const int WINDOW_HEIGHT = 720;
+
 public:
 	Input() {};
 	~Input() {};
