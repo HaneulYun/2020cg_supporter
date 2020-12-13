@@ -37,7 +37,7 @@ public:
 			auto bullet = gameObject->scene->CreateEmpty();
 			auto bulletMat = bullet->AddComponent<Transform>()->locatToWorldMatrix = transform->locatToWorldMatrix;
 
-			auto trans = glm::translate(glm::mat4(1.0f), glm::vec3(0, -0.3, 0));
+			auto trans = glm::translate(glm::mat4(1.0f), glm::vec3(0, -0.1, 0));
 
 			bullet->GetComponent<Transform>()->locatToWorldMatrix *= trans;
 			bullet->AddComponent<MeshFilter>()->mesh = mesh;

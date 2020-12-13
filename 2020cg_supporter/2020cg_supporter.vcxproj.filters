@@ -200,5 +200,8 @@
     <ClInclude Include="Log.h">
       <Filter>1_00_YellowProject\20_Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="CrossHair.h">
+      <Filter>1_00_YellowProject\20_Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
