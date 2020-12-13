@@ -32,8 +32,12 @@ public:
 
 		{
 			auto bullet = gameObject->scene->CreateEmpty();
-			bullet->AddComponent<Transform>()->locatToWorldMatrix = transform->locatToWorldMatrix;
-			bullet->GetComponent<Transform>()->position.y -= 1;
+			auto bulletMat = bullet->AddComponent<Transform>()->locatToWorldMatrix = transform->locatToWorldMatrix;
+
+			auto trans = glm::translate(glm::mat4(1.0f), glm::vec3(0, -1, 0));
+			auto scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1, 0.1, 0.1));
+
+			bullet->GetComponent<Transform>()->locatToWorldMatrix *= scale * trans;
 			bullet->AddComponent<MeshFilter>()->mesh = mesh;
 			bullet->AddComponent<Renderer>()->shader = gameObject->GetComponent<Renderer>()->shader;
 			bullet->GetComponent<Renderer>()->material = nullptr;
