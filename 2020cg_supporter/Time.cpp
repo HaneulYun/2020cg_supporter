@@ -6,8 +6,6 @@ float Time::deltaTime = 0.0f;
 void Time::CalDeltaTime()
 {
 	deltaTime = std::chrono::duration<float>(mCurTime - mPreTime).count();
-
-	cout << deltaTime << "\n ";
 }
 
 void Time::SetCurTime()

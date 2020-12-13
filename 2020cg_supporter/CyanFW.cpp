@@ -1,7 +1,6 @@
 ﻿#include "pch.h"
 #include "CyanFW.h"
 #include "GameScene.h"
-#include "ReadObj.h"
 
 Scene* CyanFW::scene = nullptr;
 Graphics* CyanFW::graphics = nullptr;
@@ -29,6 +28,7 @@ int CyanFW::Run(int argc, char** argv)
 	glutIdleFunc(Update);
 	
 	glutMouseFunc(MouseInput);
+	glutMotionFunc(PassiveMouseInput);
 	glutPassiveMotionFunc(PassiveMouseInput);
 	glutKeyboardFunc(KeyInput);
 	glutKeyboardUpFunc(KeyUpInput);
@@ -48,11 +48,13 @@ void CyanFW::Update()
 	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+	Input::Instance()->TrappedMouse();
 	Time::Instance()->Update();
-	Input::Instance()->Update();
 
 	scene->Update();
 	graphics->Render(scene);
+
+	Input::Instance()->Update();
 
 	glutSwapBuffers();
 }

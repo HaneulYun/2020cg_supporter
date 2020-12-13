@@ -33,6 +33,7 @@ public:
 	~Input() {};
 
 	static void Update();
+	static void TrappedMouse();
 	static bool GetKey(KeyCode key);
 	static bool GetKeyUp(KeyCode key);
 	static bool GetKeyDown(KeyCode key);

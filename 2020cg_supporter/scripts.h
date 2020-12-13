@@ -5,3 +5,5 @@
 #include "Controller.h"
 #include "Attach.h"
 #include "FirstPersonCamera.h"
+#include "Bullet.h"
+#include "BulletGenerator.h"

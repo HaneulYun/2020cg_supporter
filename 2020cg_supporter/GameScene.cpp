@@ -33,7 +33,9 @@ void GameScene::BuildObject()
         player->AddComponent<Transform>()->position = { 0, 0, 3 };
         player->AddComponent<FirstPersonCamera>();
         camera = player->AddComponent<Camera>();
+        player->AddComponent<Renderer>()->shader = shader;
         player->AddComponent<Controller>();
+        player->AddComponent<BulletGenerator>();
 
         auto rifle = CreateEmpty();
         auto rifleTrans = rifle->AddComponent<Transform>();
@@ -42,7 +44,6 @@ void GameScene::BuildObject()
         rifle->AddComponent<MeshFilter>()->mesh = mesh1;
         rifle->AddComponent<Renderer>()->shader = shader;
         rifle->GetComponent<Renderer>()->material = material1;
-        rifle->AddComponent<Attach>()->target = player;
     }
 
 
