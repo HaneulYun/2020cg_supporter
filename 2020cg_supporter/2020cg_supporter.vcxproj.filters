@@ -185,5 +185,11 @@
     <ClInclude Include="Material.h">
       <Filter>0_00_CyanFW\04_Material</Filter>
     </ClInclude>
+    <ClInclude Include="Attach.h">
+      <Filter>1_00_YellowProject\20_Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstPersonCamera.h">
+      <Filter>1_00_YellowProject\20_Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

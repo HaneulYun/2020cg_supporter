@@ -42,17 +42,17 @@ bool Input::GetKeyDown(KeyCode key)
 	return keyDown[(int)key];
 }
 
-bool Input::GetMouseButton(int button)
+bool Input::GetMouseButton(MouseCode button)
 {
-	return mouses[button];
+	return mouses[(int)button];
 }
 
-bool Input::GetMouseButtonUp(int button)
+bool Input::GetMouseButtonUp(MouseCode button)
 {
-	return mouseUp[button];
+	return mouseUp[(int)button];
 }
 
-bool Input::GetMouseButtonDown(int button)
+bool Input::GetMouseButtonDown(MouseCode button)
 {
-	return mouseDown[button];
+	return mouseDown[(int)button];
 }
