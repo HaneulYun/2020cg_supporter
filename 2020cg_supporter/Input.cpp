@@ -25,6 +25,7 @@ void Input::Update()
 	
 	if (mousePosition.x != WIDDOW_WIDTH * 0.5f || mousePosition.y != WINDOW_HEIGHT * 0.5f) 
 		glutWarpPointer(WIDDOW_WIDTH * 0.5f, WINDOW_HEIGHT * 0.5f);
+
 }
 
 bool Input::GetKey(KeyCode key)
