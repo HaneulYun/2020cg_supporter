@@ -5,6 +5,8 @@ class GameObject
 private:
 	bool isStarted{ false };
 
+	GameObject* parent{ nullptr };
+	deque<GameObject*> children;
 	deque<Component*> components;
 
 public:
@@ -12,6 +14,9 @@ public:
 
 	void Start();
 	void Update();
+
+	GameObject* AddChild(GameObject* child = nullptr);
+	glm::mat4 GetMatrix();
 
 	//template <typename T>
 	//T* AddComponent(T* component);
