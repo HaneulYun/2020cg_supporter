@@ -11,17 +11,13 @@ class Input : public Singleton<Input>
 {
 public:
 	static glm::vec2 mousePosition;
-	static glm::vec2 mouseOffset;
-
 	static bool keys[512];
 	static bool keyUp[512];
 	static bool keyDown[512];
-	static bool mouses[5];
+	static bool mouses[3];
 	static bool mouseUp[3];
 	static bool mouseDown[3];
 
-	static const int WIDDOW_WIDTH = 1280;
-	static const int WINDOW_HEIGHT = 720;
 public:
 	Input() {};
 	~Input() {};
@@ -33,7 +29,4 @@ public:
 	static bool GetMouseButton(int button);
 	static bool GetMouseButtonUp(int button);
 	static bool GetMouseButtonDown(int button);
-
-private:
-	static bool firstMove;
 };

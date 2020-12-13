@@ -71,11 +71,14 @@ void GameScene::BuildObject()
         for (int j = -3; j <= 3; ++j)
             for (int k = -3; k <= 3; ++k)
             {
+                if (!(!i && !j && !k))
+                    continue;
                 auto cube = CreateEmpty();
                 cube->AddComponent<Transform>()->position = { i * 10, j * 10, k * 10 };
 
-                cube->AddComponent<MeshFilter>()->mesh = (!i && !j && !k) ? mesh : mesh;
+                cube->AddComponent<MeshFilter>()->mesh = (!i && !j && !k) ? mesh : mesh0;
                 cube->AddComponent<Renderer>()->shader = shader;
+                if (!i && !j && !k)
                     cube->GetComponent<Renderer>()->material = material;
                 cube->AddComponent<RotatingBehavior>();
             }
