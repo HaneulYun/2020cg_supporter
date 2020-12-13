@@ -7,7 +7,7 @@ void Time::Update()
 {
 	curTime = GetTickCount64();
 
-	deltaTime = (curTime - oldTime) / 1000.0f;
+	deltaTime = (curTime - oldTime) * 0.001f;
 
 	oldTime = curTime;
 }

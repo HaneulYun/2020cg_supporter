@@ -29,6 +29,11 @@ public:
 		}
 	}
 
+	static void PassiveMouseInput(int x, int y)
+	{
+		Input::mousePosition = glm::vec2(x, y);
+	}
+
 	static void KeyInput(unsigned char key, int x, int y)
 	{
 		Input::keys[('a' <= key && key <= 'z') ? key - ('a' - 'A') : key] = true;
