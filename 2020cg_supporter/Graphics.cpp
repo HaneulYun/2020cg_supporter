@@ -10,7 +10,6 @@ void Graphics::Render(Scene* scene)
 
 		glUseProgram(shader);
 
-
 		GLuint projID = glGetUniformLocation(shader, "Proj");
 		glUniformMatrix4fv(projID, 1, GL_FALSE, &scene->camera->proj[0][0]);
 
@@ -26,7 +25,6 @@ void Graphics::Render(Scene* scene)
 			if (!mesh) continue;
 			
 			auto& gameObjects = meshAndSets.second;
-					
 
 			glEnableVertexAttribArray(0);
 			glBindBuffer(GL_ARRAY_BUFFER, mesh->verticesBuffer);

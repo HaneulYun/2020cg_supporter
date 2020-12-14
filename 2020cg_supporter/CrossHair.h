@@ -3,13 +3,13 @@
 class CrossHair : public Component
 {
 private /*이 영역에 private 변수를 선언하세요.*/:
-	Camera* camera;
+	Camera* camera = nullptr;
 
-	Mesh* vertiMesh;
-	Mesh* HoriMesh;
+	Mesh* vertiMesh = nullptr;
+	Mesh* HoriMesh = nullptr;
 
-	Transform* verti;
-	Transform* Hori;
+	Transform* verti = nullptr;
+	Transform* Hori = nullptr;
 
 public  /*이 영역에 public 변수를 선언하세요.*/:
 
@@ -29,17 +29,33 @@ public:
 		vertiMesh->vertices =
 		{
 			{0.0, 0.1, 0.0 },
-			{0.0, -0.1, 0.0},
-			{0.0, 0.1, 0.0}
+			{0.0, -0.1, 0.0}
 		};
+		vertiMesh->uvs =
+		{
+			{1.0, 1.0},
+			{1.0, 1.0}
+		};
+		vertiMesh->Init();
 
 		HoriMesh = new Mesh();
 		HoriMesh->vertices =
 		{
 			{0.1, 0.0, 0.0 },
-			{-0.1, -0.0, 0.0},
-			{0.1, -0.0, 0.0}
+			{-0.1, 0.0, 0.0}
 		};
+		HoriMesh->uvs =
+		{
+			{1.0, 1.0},
+			{1.0, 1.0}
+		};
+		HoriMesh->Init();
+
+		Material* material1 = new Material();
+		{
+			material1->LoadDiffuseMap("Models/rifle_Base_Color.dds");
+			material1->LoadNormalMap("Models/rifle_005005005_Normal.dds");
+		}
 
 		auto shader = gameObject->GetComponent<Renderer>()->shader;
 
@@ -48,14 +64,14 @@ public:
 		verti->locatToWorldMatrix = camera->view;
 		vertiob->AddComponent<MeshFilter>()->mesh = vertiMesh;
 		vertiob->AddComponent<Renderer>()->shader = shader;
-		vertiob->GetComponent<Renderer>()->material = nullptr;
+		vertiob->GetComponent<Renderer>()->material = material1;
 
 		auto Horiob = gameObject->scene->CreateEmpty();
 		Hori = Horiob->AddComponent<Transform>();
 		Hori->locatToWorldMatrix = camera->view;
 		Horiob->AddComponent<MeshFilter>()->mesh = HoriMesh;
 		Horiob->AddComponent<Renderer>()->shader = shader;
-		Horiob->GetComponent<Renderer>()->material = nullptr;
+		Horiob->GetComponent<Renderer>()->material = material1;
 	}
 
 	void Update(/*업데이트 코드를 작성하세요.*/)

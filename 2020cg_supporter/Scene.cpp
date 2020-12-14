@@ -3,6 +3,7 @@
 
 void Scene::Update()
 {
+
 	for (auto gameObject : gameObjects)
 		gameObject->Update();
 }

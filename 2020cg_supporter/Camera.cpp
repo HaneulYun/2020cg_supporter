@@ -4,7 +4,7 @@
 void Camera::Start()
 {
 	proj = glm::perspective(glm::radians(FOV), (float)Input::Instance()->WIDDOW_WIDTH / (float)Input::Instance()->WINDOW_HEIGHT, Near, Far);
-	//glm::ortho(-10.0f, 10.0f, -10.0f, 10.0f, 0.0f, 100.0f);
+	projmat = glm::ortho(0.0f, (float)Input::Instance()->WIDDOW_WIDTH, 0.0f, (float)Input::Instance()->WINDOW_HEIGHT, 0.1f, 100.0f);
 }
 
 void Camera::Update()

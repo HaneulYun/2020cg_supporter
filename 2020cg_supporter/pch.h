@@ -38,6 +38,7 @@ using namespace std;
 #include "GameObject.h"
 #include "Scene.h"
 
+#include "UI.h"
 #include "Graphics.h"
 
 #include "CyanFW.h"

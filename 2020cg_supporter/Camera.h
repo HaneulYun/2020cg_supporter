@@ -9,8 +9,11 @@ private:
 
 public:
 	glm::mat4 proj;
+	glm::mat4 projmat;
 	glm::mat4 view;
 
 	void Start();
 	void Update();
+
+	glm::mat4 getProj();
 };

@@ -6,7 +6,7 @@ private:
 	deque<GameObject*> gameObjects;
 
 public:
-	Camera* camera;
+	Camera* camera = nullptr;
 	map<class Shader*, map<class Mesh*, deque<GameObject*>>> renderSets;
 
 public:
@@ -15,4 +15,6 @@ public:
 
 	GameObject* CreateEmpty();
 	GameObject* AddGameObject(GameObject*);
+
+	const deque<GameObject*>& GetObjects() { return gameObjects; }
 };

@@ -178,12 +178,14 @@
     <ClCompile Include="Singleton.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Attach.h" />
+    <ClInclude Include="BoundingBox.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="BulletGenerator.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="CrossHair.h" />
@@ -208,6 +210,7 @@
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="Transform.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

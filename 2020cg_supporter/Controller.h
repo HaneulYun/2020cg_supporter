@@ -7,9 +7,9 @@ private /*이 영역에 private 변수를 선언하세요.*/:
 
 	glm::vec3 velocity = glm::vec3();
 	float jumpTimer = 0.0f;	
-	float jumpForce = 7.0f;
+	float jumpForce = 10.0f;
 
-	Transform* transform;
+	Transform* transform = nullptr;
 
 public  /*이 영역에 public 변수를 선언하세요.*/:
 	bool isJump = false;
@@ -28,9 +28,6 @@ public:
 
 	void Update(/*업데이트 코드를 작성하세요.*/)
 	{
-
-		//cout << transform->position.x <<" " << transform->position.y <<	" " << transform->position.z << "\n";
-
 		if (Input::GetKey(KeyCode::A))
 			transform->position -= transform->right * speed * Time::deltaTime;
 		if (Input::GetKey(KeyCode::D))

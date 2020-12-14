@@ -4,6 +4,7 @@
 
 Scene* CyanFW::scene = nullptr;
 Graphics* CyanFW::graphics = nullptr;
+UI* CyanFW::ui = nullptr;
 
 int CyanFW::Run(int argc, char** argv)
 {
@@ -46,7 +47,7 @@ int CyanFW::Run(int argc, char** argv)
 
 void CyanFW::Update()
 {
-	glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	Input::Instance()->TrappedMouse();

@@ -6,7 +6,9 @@ private /*이 영역에 private 변수를 선언하세요.*/:
 	Transform* transform = nullptr;
 
 	float velocity = 0;
-	float accel = 0.25f;
+	float accel = 0.5f;
+
+	float ground = 2;
 
 public  /*이 영역에 public 변수를 선언하세요.*/:
 
@@ -25,14 +27,14 @@ public:
 
 	void Update(/*업데이트 코드를 작성하세요.*/)
 	{
-		if (transform->position.y > 2)
+		if (transform->position.y > ground)
 		{
 			velocity += accel;
 			transform->position.y -= velocity * Time::deltaTime;
 		}
 		else 
 		{
-			transform->position.y = 2;
+			transform->position.y = ground;
 			velocity = 0;
 
 			auto controller = gameObject->GetComponent<Controller>();

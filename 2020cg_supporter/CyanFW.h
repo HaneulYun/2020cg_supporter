@@ -5,6 +5,7 @@ class CyanFW
 private:
 	static Scene* scene;
 	static Graphics* graphics;
+	static UI* ui;
 
 public:
 	int Run(int, char**);

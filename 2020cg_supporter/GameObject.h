@@ -1,5 +1,10 @@
 #pragma once
 
+enum class Tag
+{
+	None = 0, Player, Bullet, Wall, Robot, Plane
+};
+
 class GameObject
 {
 private:
@@ -10,6 +15,8 @@ private:
 	deque<Component*> components;
 
 public:
+	Tag tag;
+
 	class Scene* scene;
 
 	void Start();
