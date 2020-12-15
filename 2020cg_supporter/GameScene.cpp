@@ -35,10 +35,19 @@ void GameScene::BuildObject()
 	{
 		auto box = CreateEmpty();
 		box->AddComponent<Transform>();
-		box->AddComponent<MeshFilter>()->mesh = rifleMesh;
+		box->AddComponent<MeshFilter>()->mesh = box1;
 		box->AddComponent<Renderer>()->shader = shader;
-		box->GetComponent<Renderer>()->material = rifleMa;
-		box->AddComponent<BulletGenerator>();
+		box->GetComponent<Renderer>()->material = nullptr;
+		box->AddComponent<BoundingBox>();
+	}
+
+	{
+		auto box = CreateEmpty();
+		box->AddComponent<Transform>();
+		box->AddComponent<MeshFilter>()->mesh = box2;
+		box->AddComponent<Renderer>()->shader = shader;
+		box->GetComponent<Renderer>()->material = nullptr;
+		box->AddComponent<BoundingBox>();
 	}
 
 	{
