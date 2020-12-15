@@ -1,5 +1,7 @@
 #pragma once
 
+const float INF = 987654321;
+
 struct PackedVertex {
     glm::vec3 position;
     glm::vec2 uv;
@@ -30,9 +32,9 @@ public:
     GLuint verticesBuffer;
     GLuint uvsBuffer;
 
-    float width[2]{ 0, };
-    float height[2]{ 0, };
-    float depth[2]{ 0, };
+    float width[2]{ INF, -INF };
+    float height[2]{ INF, -INF };
+    float depth[2]{ INF, -INF };
 
     vector<glm::vec3> vertices;
     vector<glm::vec3> normals;

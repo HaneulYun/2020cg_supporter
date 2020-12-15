@@ -33,8 +33,10 @@ void Graphics::Render(Scene* scene)
 			glEnableVertexAttribArray(1);
 			glBindBuffer(GL_ARRAY_BUFFER, mesh->uvsBuffer);
 			glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, (void*)0);
+
 			for (auto& gameObject : gameObjects)
 			{
+				if (!gameObject) continue;
 				auto transform = gameObject->GetComponent<Transform>();
 				if (!transform) continue;
 
@@ -51,7 +53,7 @@ void Graphics::Render(Scene* scene)
 				}
 
 				int modelID = glGetUniformLocation(shader, "Model");
-				glUniformMatrix4fv(modelID, 1, GL_FALSE, &transform->locatToWorldMatrix[0][0]);
+				glUniformMatrix4fv(modelID, 1, GL_FALSE, &gameObject->GetMatrix()[0][0]);
 
 				glDrawArrays(GL_TRIANGLES, 0, mesh->vertices.size() * 3);
 			}

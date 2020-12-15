@@ -5,8 +5,6 @@ void GameObject::Start()
 {
 	for (auto component : components)
 		component->Start();
-	for (auto child : children)
-		child->Start();
 
 	auto renderer = GetComponent<Renderer>();
 	auto meshFilter = GetComponent<MeshFilter>();
@@ -21,12 +19,22 @@ void GameObject::Start()
 
 void GameObject::Update()
 {
+	if (!isActive) return;
+
 	if (!isStarted)
 		Start();
 	for (auto component : components)
 		component->Update();
-	for (auto child : children)
-		child->Update();
+}
+
+void GameObject::SetActive(bool _rhs)
+{
+	isActive = false;
+}
+
+bool GameObject::GetActive()
+{
+	return isActive;
 }
 
 GameObject* GameObject::AddChild(GameObject* child)
@@ -39,11 +47,16 @@ GameObject* GameObject::AddChild(GameObject* child)
 	return child;
 }
 
+GameObject* GameObject::GetParent()
+{
+	return parent;
+}
+
 glm::mat4 GameObject::GetMatrix()
 {
 	auto transform = GetComponent<Transform>();
 	if (!transform) return glm::mat4(1.0f);
 	if (parent)
-		return transform->locatToParentMatrix * parent->GetMatrix();
+		return parent->GetMatrix() * transform->locatToParentMatrix;
 	return transform->locatToParentMatrix;
 }

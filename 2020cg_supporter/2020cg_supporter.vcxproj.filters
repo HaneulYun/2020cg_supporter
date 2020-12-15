@@ -215,5 +215,8 @@
     <ClInclude Include="BoundingBox.h">
       <Filter>1_00_YellowProject\20_Scripts</Filter>
     </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>1_00_YellowProject\20_Scripts</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

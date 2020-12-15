@@ -11,3 +11,4 @@
 #include "Gravity.h"
 #include "Log.h"
 #include "CrossHair.h"
+#include "Robot.h"

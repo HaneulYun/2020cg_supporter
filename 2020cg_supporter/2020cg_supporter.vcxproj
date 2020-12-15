@@ -202,6 +202,7 @@
     <ClInclude Include="MeshFilter.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Robot.h" />
     <ClInclude Include="RotatingBehavior.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="ScriptForm.h" />

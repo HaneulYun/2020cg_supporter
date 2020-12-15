@@ -2,27 +2,32 @@
 
 enum class Tag
 {
-	None = 0, Player, Bullet, Wall, Robot, Plane
+	None = 0, Player, Bullet, Robot, Plane, Wall
 };
 
 class GameObject
 {
 private:
 	bool isStarted{ false };
+	bool isActive{ true };
 
 	GameObject* parent{ nullptr };
 	deque<GameObject*> children;
 	deque<Component*> components;
 
 public:
-	Tag tag;
+	Tag tag = Tag::None;
 
 	class Scene* scene;
 
 	void Start();
 	void Update();
 
+	void SetActive(bool);
+	bool GetActive();
+
 	GameObject* AddChild(GameObject* child = nullptr);
+	GameObject* GetParent();
 	glm::mat4 GetMatrix();
 
 	//template <typename T>

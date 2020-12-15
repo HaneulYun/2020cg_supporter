@@ -23,6 +23,10 @@ public:
 
 	glm::mat4 Scale(glm::vec3 vec)
 	{
-		return locatToWorldMatrix =  glm::scale(locatToWorldMatrix, vec);
+		return locatToWorldMatrix = locatToWorldMatrix * glm::scale(glm::mat4(1.0f), vec);
+	}
+	glm::mat4 Scale(float value)
+	{
+		return locatToWorldMatrix = locatToWorldMatrix * glm::scale(glm::mat4(1.0f), glm::vec3(value, value, value));
 	}
 };
